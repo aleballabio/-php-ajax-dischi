@@ -41,7 +41,6 @@ main {
 .container-cards {
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
 
 }
@@ -49,7 +48,9 @@ main {
 h1 {
     font-weight: bolder;
     color: white;
-    padding-top: 2rem;
+    padding-top: 1.5rem;
+    font-size: 1.7rem;
+    text-transform: uppercase;
 }
 
 h2,
@@ -59,19 +60,26 @@ h3 {
 }
 
 h2 {
-    padding-top: 3rem;
+    padding-top: 1.5rem;
+    font-size: 1.5rem;
 }
 
 .card {
     background-color: transparent;
     border: none;
-    padding: 3rem
+    margin: 2rem;
+    flex-basis: calc(100% / 5 - 4rem);
+    text-align: center;
 }
  .subcard {
     background-color: var(--greydark);
-    padding: 3rem;
+    padding: 2rem;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.subcard img {
+.poster {
     width: 100%;
 }
