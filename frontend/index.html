@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Dischi</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <header class="container-fluid">
+        <div class="cont-obj">
+          <img src="../img/logo-small.svg" alt="Logo" class="logo" />
+        </div>
+      </header>
+
+      <main>
+        <div class="container-fluid">
+          <div class="container-cards">
+            <div v-for="disco in arrDisco" :key="disco.title" class="card">
+              <div class="subcard">
+                <img class="poster" :src="disco.poster" :alt="disco.title" />
+                <h1>{{ disco.title }}</h1>
+                <h2>{{ disco.author}}</h2>
+                <h3>{{ disco.year }}</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
